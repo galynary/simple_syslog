@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksimple_syslog=self.webpackChunksimple_syslog||[]).push([[983],{983:function(s,e,l){l.r(e);var n=l(184);e.default=function(){return(0,n.jsx)("section",{className:"section",children:(0,n.jsx)("h2",{children:"Title"})})}}}]);
+//# sourceMappingURL=983.86ffcd84.chunk.js.map
