@@ -1,0 +1,23 @@
+.sidebar {
+  max-width: 200px;
+  padding-right: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.sidebar-menu {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sidebar-icon {
+  color: #000;
+  font-weight: 500;
+}
+.sidebar-icon:hover,
+.sidebar-icon:focus {
+  color: red;
+}
