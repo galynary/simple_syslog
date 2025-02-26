@@ -1,40 +1,34 @@
-//const {  Button, Layout, Menu, theme  } = antd;
-//const {  Sidebar } = Layout;
-
 import { Link } from 'react-router-dom';
-import {
-  HomeOutlined,
-  FileDoneOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
-import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
-import { Logo } from '../Sidebar/Logo';
-
+import { BsChatSquareTextFill } from 'react-icons/bs';
+import { IoMdHome, IoMdSettings } from 'react-icons/io';
 import '../Sidebar/Sidebar.css';
-
-export const SidebarMenu = () => {
+const Sidebar = () => {
   return (
-    <main className="main">
-      <div className="sidebar">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Logo />
-        </Suspense>
-        <nav className="sidebar-menu">
-          <Link to="/" className="sidebar-icon">
-            <HomeOutlined className="sidebar-icon" /> Home
-          </Link>
-          <Link to="/messages" className="sidebar-icon">
-            <FileDoneOutlined className="sidebar-icon" /> Messages
-          </Link>
-          <Link to="/settings" className="sidebar-icon">
-            <SettingOutlined className="sidebar-icon" /> Settings
-          </Link>
-        </nav>
+    <div className="w-48">
+      <div className="sidebar  flex-column fixed z-10 h-[100vh] shadow-md">
+        <div className="sidebar-container">
+          <div className="logo">
+            <div className="logo-text">
+              <p>imple</p>
+              <p>yslog</p>
+              <p>erver</p>
+            </div>
+          </div>
+          <nav className="nav-sidebar flex-column">
+            <Link to="/dashboard" className="sidebar-link">
+              <IoMdHome aria-label="Dashboard Icon" /> Dashboard
+            </Link>
+            <Link to="/message" className="sidebar-link">
+              <BsChatSquareTextFill aria-label="Message Icon" /> Message
+            </Link>
+            <Link to="/settings" className="sidebar-link">
+              <IoMdSettings aria-label="Settings Icon" /> Settings
+            </Link>
+          </nav>
+        </div>
       </div>
-      <Suspense fallback={<div>Loading page...</div>}>
-        <Outlet />
-      </Suspense>
-    </main>
+    </div>
   );
 };
+
+export default Sidebar;

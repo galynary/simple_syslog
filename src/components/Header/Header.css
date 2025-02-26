@@ -1,7 +1,3 @@
-.header {
-  display: block;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.header-text {
-  padding: 15px 0px;
+.logo-text {
+  text-transform: uppercase;
 }

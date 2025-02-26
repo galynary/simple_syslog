@@ -1,19 +1,12 @@
-import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import '../Header/Header.css';
-
-const Header = () => {
+export const Header = () => {
   return (
     <>
-      <header className="header">
-        <div className="header-container container">
-          <p className="header-text">Syslog server</p>
-        </div>
+      <header>
+        <p>Symbol</p>
+        <nav></nav>
       </header>
-      <Suspense fallback={<div>Завантаження...</div>}>
-        <Outlet />
-      </Suspense>
+      <Outlet />
     </>
   );
 };
-export default Header;

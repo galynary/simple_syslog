@@ -1,0 +1,7 @@
+.item-icon {
+  width: 40px;
+  height: auto;
+}
+.status-sys-item:not(:last-child) {
+  margin-bottom: 10px;
+}

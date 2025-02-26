@@ -1,23 +1,44 @@
 .sidebar {
   max-width: 200px;
-  padding-right: 10px;
-  padding: 20px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-.sidebar-menu {
-  padding-top: 30px;
+.nav-sidebar {
+  padding: 15px;
+}
+.logo {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-weight: bold;
-  font-size: 14px;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  border-bottom: 1px solid #d3d1d1;
 }
 
-.sidebar-icon {
-  color: #000;
-  font-weight: 500;
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 55px; /* Виправив значення, щоб не накладалося */
 }
-.sidebar-icon:hover,
-.sidebar-icon:focus {
-  color: red;
+
+.logo::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Задайте ширину зображення */
+  background-image: url('../../images/s.png');
+  background-size: contain; /* Підігнати зображення */
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  gap: 5px;
+}
+.sidebar-link:hover {
+  color: rgb(207, 70, 70);
 }
